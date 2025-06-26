@@ -11,6 +11,7 @@ export const ProjectManager = {
   observers: ProjectObservers,
   newProject() {
     this.project = new Project();
+    this.project.name = "New Project"
     ProjectObservers.projectSet.notify(this.project);
   },
   loadProject(data) {

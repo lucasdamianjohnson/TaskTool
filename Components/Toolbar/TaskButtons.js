@@ -3,7 +3,7 @@ import Button from "../Button.js";
 
 export default function TaskButtons() {
   const container = document.createElement("div");
-  container.classList.add("button-container");
+  container.className = "button-container";
   const text = document.createElement("p");
   text.innerText = "Task";
 
