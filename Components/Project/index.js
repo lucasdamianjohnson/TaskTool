@@ -19,13 +19,13 @@ function MountProject(project, container) {
   });
 }
 
-export default function Tasks() {
+export default function () {
   const container = document.createElement("div");
   container.classList.add("tasks");
 
   ProjectManager.observers.projectSet.subscribe((project) => {
     container.innerHTML = "";
-    MountProject(project,container);
+    MountProject(project, container);
   });
 
   return container;

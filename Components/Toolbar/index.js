@@ -1,7 +1,7 @@
 import ProjectButtons from "./ProjectButtons.js";
 import TaskButtons from "./TaskButtons.js";
 
-export default function Toolbar() {
+export default function () {
   const container = document.createElement("div");
   container.classList.add("toolbar");
   const projectButtons = ProjectButtons();
