@@ -16,6 +16,16 @@ export class Project {
     this.task.push(task);
     this.observers.taskAdded.notify(task);
   }
+  deleteTask(task) {
+    for(let i=0; i<this.task.length; i++) {
+      if(this.task[i] == task){
+        this.task.splice(i, 1);
+        this.observers.taskRemoved.notify(task);
+        return
+      }
+    }
+  }
+  
   fromJSON(data) {
     this.name = data.name;
     this.task = data.task.map((_) => {
@@ -31,3 +41,4 @@ export class Project {
     };
   }
 }
+

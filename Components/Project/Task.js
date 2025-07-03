@@ -29,5 +29,13 @@ export default function Task(props) {
 
   taskControl.append(done);
   container.append(taskControl);
+  const button = document.createElement("button");
+  button.innerText = "x";
+  taskControl.append(button);
+  button.onclick = () =>{
+    props.task.project.deleteTask(props.task);
+    container.remove();
+  }
   return container;
 }
+
